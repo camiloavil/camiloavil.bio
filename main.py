@@ -11,6 +11,19 @@ def get_root():
     content = open("www/index.html").read()
     return HTMLResponse(content=content)
 
+@app.get("/banner", response_class=HTMLResponse)
+def serve():
+    return """
+    <html>
+        <head>
+            <title></title>
+        </head>
+        <body>
+        <img src="www/banner.png">
+        </body>
+    </html>
+    """
+
 @app.get("/autor", response_class=HTMLResponse)
 def serve():
     return """

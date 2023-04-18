@@ -21,7 +21,7 @@ def serve():
     </html>
     """
 
-@app.get("/logo", response_class=HTMLResponse)
+@app.get("/logo.png", response_class=HTMLResponse)
 def serve():
     return """
     <html>

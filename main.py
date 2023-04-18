@@ -15,14 +15,22 @@ def get_root():
 def serve():
     return """
     <html>
-        <head>
-            <title></title>
-        </head>
         <body>
         <img src="www/banner.png">
         </body>
     </html>
     """
+
+@app.get("/logo", response_class=HTMLResponse)
+def serve():
+    return """
+    <html>
+        <body>
+        <img src="www/favicon.png">
+        </body>
+    </html>
+    """
+
 
 @app.get("/autor", response_class=HTMLResponse)
 def serve():
